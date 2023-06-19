@@ -4,7 +4,7 @@
     $user = 'root';
     $password = '';
     $database = 'php-crud'; 
-
+    $id="";
     $conn = new mysqli($host, $user, $password, $database);
     // Check connection
     if ($conn->connect_error) {
