@@ -39,6 +39,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         <form action="<?php echo $_SERVER['PHP_SELF']; ?>" method="post">
             <div class="mb-3">
                 <a href="index.php" class="btn btn-primary">Back to home</a>
+                
             </div>
             <div class="mb-3">
                 <input type="text" name="name" class="form-control w-50 text_center mt-3" placeholder="Name">
