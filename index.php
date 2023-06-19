@@ -28,13 +28,11 @@ include "conn.php";
                     <th>ADDRESS</th>
 
                     <th>ACTION</th>
-                </tr>
-                
+                </tr>     
             </thead>
-          
             <tbody>
-                <!--  STEP 2 query DB-->
-                  <!-- query data from db -->
+            
+                <!-- STEP 2  query data from db -->
             <?php
                     $sql = "SELECT * FROM user";
                     $result = $conn->query($sql);
@@ -42,6 +40,7 @@ include "conn.php";
                     {
                         die("Error query data from table users");
                     }
+                    
                     while ($row = $result->fetch_assoc()) {
                         echo"
                             <tr>
@@ -51,7 +50,7 @@ include "conn.php";
                                 <td>$row[address]</td>
                                 <td>
                                     <a href='' class='btn btn-primary btn-sm'>Edite</a>
-                                    <a href='delete.php?id=' . $row[id] .''  class='btn btn-danger btn-sm'>Delete</a>
+                                    <a href='./delet.php?id=$row[id]'  class='btn btn-danger btn-sm'>Delete</a>
                                 </td>
                             </tr>
                         ";
